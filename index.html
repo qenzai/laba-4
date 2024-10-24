@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна - Турфірма</title>
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Підключення шрифтів Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Підключення Font Awesome для іконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header id="top">
+        <div class="header-container">
+            <h1>Турфірма CopyPaste</h1>
+            <nav>
+                <a href="index.html">Головна</a>
+                <a href="survey.html">Опитувальник</a>
+                <a href="news.html">Новини</a>
+                <a href="contact.html">Контакти</a>
+                <a href="new.html">Відгуки</a>
+            </nav>
+            <!-- Блок Authentication -->
+            <div class="auth-section">
+                <h2>Authentication</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <h2>Ласкаво просимо!</h2>
+        <p>Ми пропонуємо найкращі туристичні послуги для вас. Відпочинок, екскурсії, пригоди - усе, що ви тільки можете собі уявити!</p>
+        
+        <!-- Контейнер із зображенням та текстом -->
+        <div class="image-container">
+            <div class="overlay-text">
+                Are you ready?
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/021/013/524/small/like-icon-on-transparent-background-free-png.png" alt="Like icon" class="transparent-image">
+        </div>
+
+        <section>
+            <h3>Чому обирають нас?</h3>
+            <p>Наша фірма гарантує вам найвищий рівень обслуговування та незабутні враження від вашого відпочинку.</p>
+            <p>Довіра клієнтів — це наш пріоритет, і ми завжди намагаємось виправдати їх очікування.</p>
+        </section>
+
+
+        <!-- Порожні блоки для збільшення висоти сторінки -->
+        <div style="height: 500px;"></div>
+
+        <button id="scrollTopButton" onclick="scrollToTop()">⬆</button>
+    </main>
+    
+    <bottom>
+        <p>&copy; 2024 Турфірма. Всі права захищені.</p>
+    </bottom>
+
+    <a href="#top" class="scroll-top">&#9650;</a>
+</body>
+
+</html>

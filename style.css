@@ -1,0 +1,320 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.auth-section form button {
+  padding: 8px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-section form button:hover {
+  background-color: #222;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Вирівнювання по вертикалі */
+  gap: 15px; /* Відстань між елементами меню */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px; /* Відступи для пунктів меню */
+  transition: background 0.3s ease-in-out;
+  display: flex; 
+  align-items: center; /* Вирівнювання тексту по вертикалі */
+  height: 100%; 
+  line-height: 1.5;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.dropdown-toggle {
+  margin-left: 5px; /* Відступ для символу випадаючого меню */
+  display: inline-flex; /* Вирівнювання по вертикалі */
+  align-items: center; /* Вирівнювання тексту по вертикалі */
+}
+
+.search-form {
+  display: flex; /* Зміна на flex */
+  align-items: center; /* Вирівнювання по вертикалі */
+  margin-left: 15px;
+}
+
+.search-form input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.search-form button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+main {
+  padding: 50px 0;
+}
+
+main h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Приховує частини зображення, що виходять за межі контейнера */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease; /* Додаємо плавний перехід */
+}
+
+.image-container:hover img {
+  opacity: 0.5; /* Зменшує непрозорість зображення при наведенні */
+}
+
+.overlay-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1; /* Забезпечує, що текст завжди на поверхні */
+}
+
+.image-container:hover .overlay-text {
+  display: block; /* Показує текст при наведенні на контейнер */
+}
+
+.image-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, transparent 32px, #00000056 0);
+  z-index: 0; /* Забезпечує, що градієнт під текстом */
+  pointer-events: none; /* Дозволяє натискати на текст */
+}
+
+img {
+  width: 100%; /* Задати ширину зображення */
+  height: auto; /* Автоматична висота для збереження пропорцій */
+  border-radius: 10px; /* Закруглення кутів зображення */
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.scroll-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #444;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.scroll-top:hover {
+  background: #222;
+}
+
+
+.main-link{
+  position: relative;
+}
+
+.submenu{
+  position: absolute;
+  display: none;
+  /* background-color: ; */
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.main-link:hover .submenu{
+  display: block !important;
+}
+
+@media (max-width: 767.98px) {
+  .sign-in-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  nav {
+    display: grid;
+    justify-content: center;
+    align-items: center; /* Вирівнювання по вертикалі */
+    gap: 15px; /* Відстань між елементами меню */
+  }
+
+  form {
+    display: grid;
+    justify-content: center;
+    align-items: center; /* Вирівнювання по вертикалі */
+    gap: 15px; /* Відстань між елементами меню */
+  }
+
+  mt-5 {
+    display: grid;
+    justify-content: center;
+    align-items: center; /* Вирівнювання по вертикалі */
+    gap: 15px; /* Відстань між елементами меню */
+  }
+}
+
+/* Для пристроїв з шириною екрану менше 768px */
+@media (max-width: 767.98px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Для пристроїв з шириною екрану від 768px до 991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Для пристроїв з шириною екрану від 992px до 1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* Для пристроїв з шириною екрану більше 1200px */
+@media (min-width: 1200px) {
+  .container {
+    width: 70%;
+  }
+}
+
+#scrollTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1000;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#scrollTopButton:hover {
+  background-color: #0056b3;
+}
+
+.show-scroll-button {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.scroll-top {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  
+}
+
+.auth-section {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  
+}
+
+.submenu {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  
+}
+/* Стиль для контейнера хедера */
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Стиль для навігації */
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Стиль для блоку Authentication */
+.auth-section {
+    margin-left: auto;
+    margin-right: 20px;
+} 
+
